@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+</head>
+<body>
+    <h1>Crud Aluno</h1>
+    <a href="/add">Adicionar Aluno</a>
+    <table border="1" width="70%">
+        <thead>
+            <tr>
+                <th>RA</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Logradouro</th>
+                <th>Número</th>
+                <th>CEP</th>
+                <th>Complemento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in alunos  %}
+            <tr>
+                <td>{{a.ra}}</td>
+                <td>{{a.nome}}</td>
+                <td>{{a.email}}</td>
+                <td>{{a.logradouro}}</td>
+                <td>{{a.numero}}</td>
+                <td>{{a.cep}}</td>
+                <td>{{a.complemento}}</td>
+                <td>
+                    <a href="/edit/{{a.ra}}">Editar</a>
+                    <a href="/delete/{{a.ra}}">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
