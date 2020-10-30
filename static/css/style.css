@@ -1,0 +1,32 @@
+body{
+    background-color: #e3eeff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    margin: 30px;
+}
+.botaoAdicionar{
+    margin-left: 50px;
+}
+.editar{
+    padding-right: 10px;
+}
+
+.excluir{
+    padding-left: 10px;
+}
+
+.containerTabela{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+}
+
+.containerFormEditar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+}
