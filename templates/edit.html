@@ -7,15 +7,33 @@
 </head>
 <body>
     <h1>Editar Aluno {{aluno.ra}}</h1>
-    <form action="/edit/{{aluno.ra}}" method="POST">
-        <input type="text" name="nome" value="{{aluno.nome}}" />
-        <input type="text" name="email" value="{{aluno.email}}" />
-        <input type="text" name="logradouro" value="{{aluno.logradouro}}" />
-        <input type="text" name="numero" value="{{aluno.numero}}" />
-        <input type="text" name="cep" value="{{aluno.cep}}" />
-        <input type="text" name="complemento" value="{{aluno.complemento}}" />
-        <br/>
-        <input type="submit" value="Enviar" />
-    </form>
+    <table border="1">
+        <form action="/edit/{{aluno.idAluno}}" method="POST">
+            <tr>
+                <td><input type="text" name="nome" value="{{aluno.nome}}" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="email" value="{{aluno.email}}" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="logradouro" value="{{aluno.logradouro}}" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="numero" value="{{aluno.numero}}" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="cep" value="{{aluno.cep}}" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="complemento" value="{{aluno.complemento}}" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="Enviar" />
+                </th>
+            </tr>
+        </form>
+    </table>
+
 </body>
 </html>
