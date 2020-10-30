@@ -9,9 +9,9 @@ class Aluno(db.Model):
     __tablename__ = "tbaluno_rafael_belmonte_izukawa"
     idAluno = db.Column(db.Integer, primary_key=True, autoincrement=True)
     ra = db.Column(db.Integer, unique=True, nullable=False)
-    nome = db.Column(db.String(50), unique=True)
-    email = db.Column(db.String(50))
-    logradouro = db.Column(db.String(50))
+    nome = db.Column(db.String(50), unique=True, nullable=False)
+    email = db.Column(db.String(50), nullable=False)
+    logradouro = db.Column(db.String(50), nullable=False)
     numero = db.Column(db.String(5))
     cep = db.Column(db.String(10))
     complemento = db.Column(db.String(20))
