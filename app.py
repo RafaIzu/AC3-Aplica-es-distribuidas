@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 #app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///cliente.db" --> descomente essa linha caso o sql não funcione!
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:toalha28@localhost:5432/aluno_teste"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://dbimpacta:impacta#2020@dbimpacta.postgresql.dbaas.com.br:5432/dbimpacta"
 db = SQLAlchemy(app)
 
 class Aluno(db.Model):
