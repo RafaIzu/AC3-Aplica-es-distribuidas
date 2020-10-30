@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}" >
+    
 </head>
 <body>
     <h1>Crud Aluno</h1>
-    <a href="/add">Adicionar Aluno</a>
+    <a href="/add"><img src="{{ url_for('static', filename='imagens/adicionar.png')}}" alt="adicionar"></a>
     <table border="1" width="70%">
         <thead>
             <tr>
@@ -31,12 +33,13 @@
                 <td>{{a.cep}}</td>
                 <td>{{a.complemento}}</td>
                 <td>
-                    <a href="/edit/{{a.idAluno}}">Editar</a>
-                    <a href="/delete/{{a.idAluno}}">Excluir</a>
+                    <a href="/edit/{{a.idAluno}}"><img src="{{ url_for('static', filename='imagens/editar.png')}}" alt="editar"></a>
+                    <a href="/delete/{{a.idAluno}}"><img src="{{ url_for('static', filename='imagens/excluir.png')}}" alt="remover"></a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}" ></script>
 </body>
 </html>
